@@ -1,5 +1,5 @@
 const quoteEl = document.getElementById('quote');
-const quoteBtn = document.getElementById('tacobutton');
+const quoteBtn = document.getElementById('quotebutton');
 
 quoteBtn.addEventListener('click', generateQuote);
 
