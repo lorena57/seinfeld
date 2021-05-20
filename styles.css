@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=KoHo:wght@300&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /* background-color: rgba(46, 184, 202, 255); */
+  background-color: rgb(238, 241, 247);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  margin: 0;
+  /* font-family: 'KoHo', sans-serif; */
+}
+
+.container {
+  /* background-color: rgba(46, 184, 202, 255); */
+  /* background-color: rgba(247, 213, 36, 255); */
+  background-color: rgba(247, 213, 36, 255);
+  font-family: 'KoHo', sans-serif;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+  padding: 50px 20px;
+  text-align: center;
+  max-width: 100%;
+  width: 800px;
+}
+
+h3 {
+  margin: 0;
+  letter-spacing: 1px;
+  font-family: 'KoHo', sans-serif;
+  color: rgba(236, 29, 47, 255);
+  font-size: 50px;
+}
+
+.quote {
+  font-size: 30px;
+  letter-spacing: 1px;
+  line-height: 40px;
+  margin: 50px auto;
+  max-width: 600px;
+  /* color: rgb(0, 0, 0); */
+  color: rgba(236, 29, 47, 255);
+  font-family: 'KoHo', sans-serif;
+}
+
+.btn {
+  background-color: rgba(46, 184, 202, 255);
+  color: rgba(236, 29, 47, 255);
+  font-weight: 900;
+
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+  padding: 14px 40px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 5px;
+  font-family: 'KoHo', sans-serif;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+img {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
