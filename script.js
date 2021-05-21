@@ -16,7 +16,8 @@ function generateQuote() {
     .then((res) => res.json())
     .then((data) => {
       quoteEl.innerHTML = data.quote;
-    });
+    })
+    .catch((err) => console.error(`${err} 😜`));
 }
 
 // data.author
