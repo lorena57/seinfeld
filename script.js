@@ -4,23 +4,26 @@ const errContainer = document.querySelector('.main');
 
 quoteBtn.addEventListener('click', generateQuote);
 
-// generateQuote();
-
-const renderError = function (msg) {
-  errContainer.insertAdjacentText('beforebegin', msg);
-};
-
 const api_url = 'https://seinfeld-quotes.herokuapp.com/random';
 
 async function generateQuote() {
   const response = await fetch(api_url);
   const data = await response.json();
   const { quote, author } = data;
+  console.log(quote);
+  console.log(author);
   quoteEl.innerHTML = quote;
 }
 
-generateQuote();
+const renderError = function (msg) {
+  errContainer.insertAdjacentText('beforebegin', msg);
+};
 
+generateQuote().catch((err) => {
+  renderError(`Something went wrong ${err.message}. Try again!`);
+});
+
+//Old code
 // function generateQuote() {
 //   const config = {
 //     headers: {
@@ -39,5 +42,3 @@ generateQuote();
 //       renderError(`Something went wrong 💥💥 ${err.message}. Try again!`);
 //     });
 // }
-
-// data.author
