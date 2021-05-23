@@ -3,19 +3,23 @@ const quoteBtn = document.getElementById('quotebutton');
 const errContainer = document.querySelector('.main');
 
 function checkButtonEqualQuote(author) {
-  console.log(author);
+  // console.log(author);
   let buttons = document.querySelectorAll('.btn');
   buttons.forEach((btn) => {
     btn.addEventListener('click', (e) => {
       //Trying to tie in button character to quote
+      // debugger;
       let btnName = e.target.value;
-      if (btnName === author) {
-        alert('ok');
-      } else {
-        alert('wrong answer');
-      }
 
-      // alert(e.target.value);
+      let answer = btnName === author ? alert('ok') : alert('wrong answer');
+      // if (btnName === author) {
+      //   alert('ok');
+      // } else {
+      //   alert('wrong answer');
+      // }
+
+      // let clearOut = document.querySelectorAll('btn');
+      // clearOut.reset();
     });
   });
 }
@@ -28,6 +32,7 @@ async function generateQuote() {
   const response = await fetch(api_url);
   const data = await response.json();
   const { quote, author } = data;
+  console.log(data);
   console.log(quote);
   console.log(author);
   quoteEl.innerHTML = quote;
