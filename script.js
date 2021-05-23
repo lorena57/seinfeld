@@ -11,7 +11,9 @@ function checkButtonEqualQuote(author) {
       // debugger;
       let btnName = e.target.value;
 
-      let answer = btnName === author ? alert('ok') : alert('wrong answer');
+      let answer = displayMessage(btnName === author ? 'Correct' : 'Wrong');
+
+      // let answer = btnName === author ? alert('ok') : alert('wrong answer');
       // if (btnName === author) {
       //   alert('ok');
       // } else {
@@ -47,6 +49,10 @@ generateQuote().catch((err) => {
   console.error(`${err} 💥💥`);
   renderError(`Something went wrong 💥💥 ${err.message}. Try again!`);
 });
+
+const displayMessage = function (message) {
+  document.querySelector('.message').textContent = message;
+};
 
 // .catch((err) => {
 //   renderError(`Something went wrong ${err.message}. Try again!`);
